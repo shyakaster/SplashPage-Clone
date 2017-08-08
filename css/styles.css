@@ -53,6 +53,7 @@ a {
   rgba(115,129,203,1) 68%, rgba(125,106,212,1) 100%);
   color:white;
   padding-top:1.3rem;
+  height:753px;
 }
 
 .logo
@@ -65,13 +66,6 @@ a {
 .header
 {
   display:flex;
-}
-
-.main-nav
-{
-  display:flex;
-  margin-left:auto;
-
 }
 
 .main-nav li
@@ -89,13 +83,13 @@ a {
 
 .header-content
 {
-    margin-top:3.5rem;
+    margin-top:4rem;
+    position:relative;
 }
 
 .header-content > p
 {
     font-size:1.6rem;
-    max-width:55%;
 }
 
 .header-content > p:first-of-type
@@ -117,10 +111,15 @@ a {
     background-color: white;
 }
 
+.btn-nav:hover
+{
+    background-color: white;
+}
+
 .btn-content
 {
-    max-width:18%;
-    margin:2.5rem 0;
+    max-width:70%;
+    margin:2.5rem 0 4rem 0;
     border-radius:12px;
     font-weight: normal;
 }
@@ -130,27 +129,275 @@ a {
     padding-top:0.3rem;
 }
 
+
 /*************************
 * Hanging Content Section *
 **************************/
 
-.hanging-content
+.hanging-box
 {
     background-color:white;
-    width:75%;
-    height:200px;
+    width:93%;
     border-radius:8px;
+    position:absolute;
+    left: 50%;                       /* centers hanging content */
+    transform: translate(-50%, 0);  /* centers hanging content */
+    top:98%;
+    z-index:999;
+
 
 }
 
+.hanging-content
+{
+    display:flex;
+    height:100%;
+    border-radius:8px;
+    -webkit-box-shadow: 1px 0 12px 0 rgba(150,150,150,1);
+    -moz-box-shadow: 1px 0 12px 0 rgba(150,150,150,1);
+    box-shadow: 1px 0 12px 0 rgba(150,150,150,1);
+}
 
+.hanging-sidebar
+{
+    display:none;
+}
+
+
+.list-circle:before
+{
+    width:10px;
+    height:10px;
+    content: '';
+    display:inline-block;
+    background-color:#4aa9b6;
+    border-radius:50%;
+    margin-right:0.5rem;
+}
+
+.hanging-sidebar > div
+{
+    display:inline-flex;
+    background-color:#4aa9b6;
+    padding-left:1.6rem;
+    padding-right:1rem;
+    color:white;
+    border-radius: 0 3px 3px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.hanging-sidebar div > span
+{
+    font-size:0.8rem;
+    color:#4aa9b6;
+    background-color:white;
+    border-radius:5px;
+    display:inline-block;
+    margin-right:0.2rem;
+}
+
+.hanging-sidebar div > span
+{
+    font-size:0.7rem;
+    color:#4aa9b6;
+    background-color:white;
+    border-radius:2px;
+    display:inline-block;
+    margin-right:0.6rem;
+    padding:0 0.18rem;
+}
+
+.hanging-main
+{
+    color:black;
+    padding:0.5rem 0;
+}
+
+.hanging-main h3:first-of-type
+{
+    margin:0;
+}
+
+.hanging-main h3
+{
+    text-transform: lowercase;
+    padding:0 0 0.8rem 1rem;
+    border-bottom:1px solid #ddd;
+    margin:1.3rem 0;
+}
+
+.hanging-main ul
+{
+    padding-left:1rem;
+}
+
+.hanging-main ul li:first-of-type
+{
+    margin-top:1.2rem;
+}
+
+.hanging-main ul li
+{
+    margin-bottom:1.3rem;
+}
+
+
+li.donut:before,.purple-bg:before, li.teal-bg:before
+{
+    content:"";
+    display:inline-block;
+    width:64px;
+    height:64px;
+    position: absolute;
+}
+
+
+li.donut:before
+{
+    background: url("../images/donut_face_64.v0.png") center center no-repeat;
+}
+
+.purple-bg:before
+{
+    background: linear-gradient(135deg,
+                rgba(138,90,215,1) 0%,
+                rgba(151,89,210,1) 37%,
+                rgba(162,87,205,1) 55%,
+                rgba(169,86,202,1) 66%,
+                rgba(177,84,198,1) 100%);
+    border-radius:7px;
+}
+
+li.teal-bg:before
+{
+    background: linear-gradient(135deg,
+                rgba(86,184,181,1) 0%,
+                rgba(82,179,181,1) 37%,
+                rgba(76,170,181,1) 55%,
+                rgba(73,167,182,1) 66%,
+                rgba(68,161,182,1) 100%);
+    border-radius:7px;
+}
+
+.hanging-main ul li > h4, .hanging-main ul li > p
+{
+    padding-left:5.5rem;
+}
+
+li.donut > p > i
+{
+    font-size:0.8rem;
+}
+
+.hanging-main ul li p
+{
+    margin-bottom:0;
+}
+
+.hanging-main ul li h4
+{
+    text-transform: lowercase;
+}
+
+
+p.sun > i:first-of-type
+{
+    margin-right:0.3rem;
+    font-size:0.8rem;
+    font-weight: bold;
+}
+
+p.sun > i:last-of-type
+{
+    margin-left:0.3rem;
+    font-size:0.8rem;
+    font-weight:bold;
+}
+
+.green-link
+{
+    color:#4aa9b6;
+}
+
+.chat-box
+{
+    height:45px;
+    border-radius: 6px;
+    border:1px solid #dddddd;
+    padding-left:1rem;
+    position:relative;
+}
+
+.chat-box > i
+{
+    height:100%;
+    border-right:1px solid #dddddd;
+    padding-top:15px;
+    padding-right:1rem;
+    color:#a9a9a9;
+    position:absolute;
+}
+
+
+
+/*************************
+***** Teams Section ******
+**************************/
+
+.teams
+{
+    background-color:#f4f6f8;
+    padding-top:12rem;
+}
+
+
+.teams-content > h1
+{
+    text-transform:none;
+    padding-top:5rem;
+    text-align:center;
+    font-size:3.2rem;
+}
+
+.teams-content ul:first-of-type
+{
+    margin-top:5rem;
+    margin-bottom:4.5rem;
+}
+
+.teams-content ul:first-of-type li
+{
+    margin-right:0.5rem;
+}
+
+.teams-content ul li
+{
+    display:inline-block;
+}
+
+.teams-list
+{
+    margin-bottom:4rem;
+}
+
+
+.teams-list li > img
+{
+    max-width:75%;
+}
+
+.teams-list .invision-logo
+{
+    max-width:100%;
+}
 
 /*************************
 ***** Invision Section ***
 **************************/
 
 .invision {
-  margin-top:2rem;
+  padding:2rem 0 3rem;
   background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,
   rgba(248,249,250,1) 55%, rgba(247,249,250,1) 71%,
   rgba(247,249,250,1) 78%, rgba(245,247,249,1) 81%,
@@ -184,7 +431,7 @@ a {
 }
 
 .screenshot-box {
-  padding-top:3.2rem;
+  padding-top:4.5rem;
 }
 
 /*************************
@@ -196,7 +443,7 @@ a {
   display:flex;
   flex-direction: column;
   align-items: center;
-  padding-top:2rem;
+  padding:2rem 0 1rem;
 }
 
 .testimonial-box blockquote {
@@ -241,14 +488,27 @@ a {
   font-weight:bold;
 }
 
+/*************************
+** People First Section **
+**************************/
 
+#people-first{
+    background: linear-gradient(to bottom, rgba(135,90,217,1) 0%,
+                rgba(145,89,213,1) 37%,
+                rgba(149,89,210,1) 55%,
+                rgba(152,88,209,1) 75%,
+                rgba(165,86,204,1) 100%);
+  padding:6.5rem 1rem 3rem;
+  color:white;
 
-/*-----------------------------------------  */
-/*People first section  */
-/*------------------------------------------  */
-/* #people-first h1 h2  p{
-  color: white;
+}
+
+/* form{
+  position: absolute;
+  top: 44px;
+  left: 380px;
 } */
+<<<<<<< HEAD
 #people-first{
   background: linear-gradient(to bottom right, #855BDA, #B654C4);
   background-color: rgba(0, 0, 0, 0);
@@ -281,14 +541,76 @@ blockquote{
 .spacex5{
   height: 10px;
   width: 100%;
+=======
+
+#people-first h1
+{
+    font-size:3rem;
+    letter-spacing:0.2rem;
+    margin-bottom:0;
 }
-.explanation{
-  text-align: center;
-  font-size: 24px;
-  color: white; 
+
+#people-first h2
+{
+    text-align: center;
+    margin-bottom:2rem;
 }
- .people-first-main-text, .join-text {
- }
+
+#people-first h1,h2{
+  text-transform:none;
+}
+
+.content-section
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+>>>>>>> df1b425c4dae4bdcd39d6619424cb039e7a3c96a
+}
+
+.culture
+{
+    margin-bottom:2rem;
+}
+
+
+.content-section > div > blockquote
+{
+    line-height: 1.2;
+    font-size: 20px;
+    margin-bottom:0.4rem;
+}
+
+
+.content-section > div > blockquote:before {
+    content:open-quote;
+    position:absolute;
+    top:53%;
+    left:24%;
+    color:white;
+    font-size:4rem;
+}
+
+.content-section > div > blockquote:after {
+    content: close-quote;
+    position:absolute;
+    top:53%;
+    right:25.5%;
+    color:white;
+    font-size: 4rem;
+}
+
+.content-section > div cite
+{
+    font-size:0.9rem;
+    padding-left:1.2rem;
+}
+
+.waitlist
+{
+    margin-top:2rem;
+}
+
 /*************************
 *****  Plans Section *****
 **************************/
@@ -401,12 +723,6 @@ blockquote{
   background: none;
 }
 
-
-
-/*************************
-*****  Plans Section *****
-**************************/
-
 .plans {
   background-color:#eeeeee;
 }
@@ -492,8 +808,6 @@ blockquote{
 }
 
 
-
-
 .btn-plans
 {
   max-width: 41%;
@@ -520,7 +834,28 @@ blockquote{
 {
   max-width:53%;
   text-transform: uppercase;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding-top:2rem; */
 }
+
+/*************************
+** Twitter Cards Section **
+**************************/
+
+#twitter-cards{
+    padding: 4rem;
+}
+#twitter-cards img{
+    max-width: 100%;
+}
+#twitter-cards .card p {
+    font-size: .9rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+<<<<<<< HEAD
 #twitter-cards{
   padding: 4rem;
 }
@@ -539,6 +874,34 @@ blockquote{
 }
 .card-block > p{
   font-size: .7rem;
+=======
+#twitter-cards .card-block > h4{
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: lowercase;
+}
+#twitter-cards .card-block > p{
+    font-size: .7rem;
+
+}
+#twitter-cards .card-block a{
+    padding-left: 2rem;
+}
+.avatar{
+    margin: .8rem;
+    width: 36px;
+    height: 36px;
+}
+.handle{
+    position: relative;
+    top: -24px;
+    left: 50px;
+}
+
+
+
+
+>>>>>>> df1b425c4dae4bdcd39d6619424cb039e7a3c96a
 
 }
 .card-block a{
